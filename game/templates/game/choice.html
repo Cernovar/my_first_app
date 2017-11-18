@@ -1,0 +1,19 @@
+{% extends "game/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+    <div>
+        <h1 class="choice">Choose difficulty </h1>
+        <div class="div">
+            <a href="{% url 'normal_game' %}"><img class="normal_img" src="{% static 'game/images/ssp_normal.png' %}" alt="img"></a>
+            <span id="a">Norm</span>
+       
+            <a href="{% url 'hard_game' %}"><img class="hard_img" src="{% static 'game/images/ssp_hard.jpg' %}" alt="img"></a>
+            <span id="b">Hard</span>
+        </div>
+        
+    </div>
+    
+{% endblock %}

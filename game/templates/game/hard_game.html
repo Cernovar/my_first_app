@@ -1,0 +1,51 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title>Hard game</title>
+	<link rel="shortcut icon" href="{% static 'game/images/gamepad.png' %}">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="{% static 'game/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'game/style.css' %}">
+</head>
+
+<body class="body-hard">
+
+<div class="wrapper-hard">
+
+	<header class="header-hard">
+        <span>   
+            <a href="{% url 'greeting' %}"><img src="{% static 'game/images/ssp_logo.png' %}" alt="img"></a> 
+            <a id="about" href="{% url 'about' %}" style="padding:9px 20px 9px 20px">About</a>
+
+        </span>
+	</header><!-- .header-->
+
+	<main class="content">
+        
+        {% block content %}
+            <h1 class="norm_game">Choose your destiny! >:D</h1>
+            <div >
+                <a href="0" title="Stone"><img class="pic" src="{% static 'game/images/stone_pic.png' %}" alt=""></a>
+                <a href="1" title="Scissors"><img class="pic" src="{% static 'game/images/scissors_pic.png' %}" alt=""></a>
+                <a href="2" title="Paper"><img class="pic" src="{% static 'game/images/paper_pic.png' %}" alt=""></a>
+            </div>
+        {% endblock content %}
+            
+		
+	</main><!-- .content -->
+
+</div><!-- .wrapper -->
+
+<footer class="footer-hard">
+	<p>No rights. No hope. No life. &cross; {% now 'Y' %} </p>
+</footer><!-- .footer -->
+
+</body>
+
+</html>

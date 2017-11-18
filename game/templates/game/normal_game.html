@@ -1,0 +1,14 @@
+{% extends "game/base.html" %}
+
+{% load static %}
+
+{% block content %}
+    <h1 class="norm_game">Stone! Scissors! Paper!...</h1>
+    <div >
+        <a href="0" title="Stone"><img class="pic" src="{% static 'game/images/stone_pic.png' %}" alt=""></a>
+        <a href="1" title="Scissors"><img class="pic" src="{% static 'game/images/scissors_pic.png' %}" alt=""></a>
+        <a href="2" title="Paper"><img class="pic" src="{% static 'game/images/paper_pic.png' %}" alt=""></a>
+    </div>
+    
+    
+{% endblock content %}

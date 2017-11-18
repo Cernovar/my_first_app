@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title>Hard game</title>
+	<link rel="shortcut icon" href="{% static 'game/images/gamepad.png' %}">
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="{% static 'game/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'game/style.css' %}">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+	<header class="header">
+        <span>   
+            <a href="{% url 'greeting' %}"><img src="{% static 'game/images/ssp_logo.png' %}" alt="img"></a> 
+        </span>
+	</header><!-- .header-->
+
+	<main class="content">
+		 <div>
+        <h1 class="greeting">
+            Hello again!
+        </h1>
+        <p style="text-align:center;font-size:25px;line-height:30px;">
+            My name is Andrey and I am author of this ugliness. :) <br>
+            I've never done programming before. But a little over a year ago I decided to try myself in this matter. <br> 
+            Learning from scratch was not easy and that's the result: clumsy and ridiculous app. <br>
+            But it's just begining. I hope. :D <br> <br>
+            Many thanx for used my site. Double thanx if you leave your name and comment into the forms below. <br> <br>
+            <strong class="good-luck">Good luck and have a nice day!</strong>
+        </p>
+    </div>
+    <details class="spoiler" >
+        <summary style="font-size:15px";>Spoiler</summary>
+        <p style="text-align:center;font-size:25px;line-height:30px;">
+            Many of you will ask: why is everything here in clumsy English from Google translate instead normal Russian text?<br>
+            And I'll answer: I don't know. :D I began to do so, but when I realized how many text here, it was too lazy to remodel. <br>
+            <s>Suffer.</s> Sorry. :)
+        </p>
+    </details>
+
+    <form class="comments"  method="POST">{% csrf_token %}
+        <div style="margin-top: 50px;margin-bottom: 50px;font-size: 40px;margin-left:15%;color:green">
+            {{ tnx }}
+        </div>
+        <p style="font-size:15px;line-height:30px;">Enter your name: </p>
+        <div>
+            {{ form.username }}
+             
+        </div>
+        <p style="font-size:15px;line-height:30px;">Enter your comment: </p>
+        <div>
+                {{ form.comments }}
+        </div>
+        <button class="send-btn" type="submit"> Send!</button>
+    </form>
+	</main><!-- .content -->
+
+</div><!-- .wrapper -->
+
+<footer class="footer">
+	<p>No rights. No hope. No life. &cross; {% now 'Y' %} </p>
+</footer><!-- .footer -->
+
+</body>
+
+</html>

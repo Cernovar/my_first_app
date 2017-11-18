@@ -1,0 +1,48 @@
+{% extends "game/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+    {% if alert == "You won!" %}
+        <div class="alert" style="color:green">
+            {{ alert }}
+        </div>
+    {% elif alert == "You lose..." %}
+        <div class="alert" style="color:red">
+            {{ alert }}
+        </div>
+    {% else %}
+    <div class="alert">
+        {{ alert }}
+    </div>
+    {% endif %}
+        
+    <span >
+        {% if  player  == 0 %}
+            <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+        {% elif player  == 1 %} 
+            <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+        {% elif player == 2 %}
+            <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+        {% endif %}
+    </span>
+    
+    <span class="comp_step">
+        {% if  comp  == 0 %}
+            <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+        {% elif comp  == 1 %} 
+            <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+        {% elif comp == 2 %}
+            <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+        {% endif %}
+    </span>
+
+    <p class="scores">{{ user_score }} : {{ comp_score }}</p> 
+
+    <form action="{% url 'normal_game' %}">
+        <button class="try_again_btn" >Try again</button>
+    </form>
+
+{% endblock content %}

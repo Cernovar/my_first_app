@@ -1,0 +1,231 @@
+{% extends "game/hard_game.html" %}
+
+{% load static %}
+
+{% block content %}
+    
+    {% if count <= 5 %}
+        <div class="alert" style="color:red; text-shadow: -2px -2px 4px black">
+            <p>
+                You lose...
+            </p>
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+            <p class="scores">0 : {{ count }}</p> 
+            <form action="{% url 'hard_game' %}">
+                <button class="try_again_btn" >Try again</button>
+            </form>
+    {% elif count == 6 %}
+        <div class="alert" style="color:red; text-shadow: -2px -2px 4px black;font-size:50px;">
+            <p>
+                You lose...
+            </p>
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <p class="scores">0 : 10</p> 
+        <form action="{% url 'hard_game' %}">
+            <button class="try_again_btn" >Try again</button>
+        </form>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:20px; margin-left:70%;margin-top:5%;position:absolute;" alt="img">
+    {% elif count == 7 %}
+        <div >
+            <p class="alert" style="color:red; text-shadow: -2px -2px 4px black;font-size:60px;">
+                You lose...
+            </p>
+            <img src="{% static '/game/images/trollface_right.png' %}" style="height:20px;position:absolute;" alt="img">
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <p class="scores">0 : 42</p> 
+        <form action="{% url 'hard_game' %}">
+            <button class="try_again_btn" >Try again</button>
+        </form>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:40px; margin-left:70%;margin-top:5%;position:absolute;" alt="img">
+    {% elif count == 8 %}
+        <div >
+            <p class="alert" style="color:red; text-shadow: -2px -2px 4px black;font-size:65px;">
+                You lose...
+            </p>
+            <img src="{% static '/game/images/trollface_right.png' %}" style="height:30px;position:absolute;" alt="img">
+            <img src="{% static '/game/images/lol2.png' %}" style="height:60px;margin-left:60%;position:absolute;" alt="img">
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <p class="scores">0 : 128</p> 
+        <form action="{% url 'hard_game' %}">
+            <button class="try_again_btn" >Try again</button>
+        </form>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:50px; margin-left:70%;margin-top:5%;position:absolute;" alt="img">
+    {% elif count == 9 %}
+        <div >
+            <p class="alert" style="color:red; text-shadow: -2px -2px 4px black;font-size:70px;">
+                You lose...
+            </p>
+            <img src="{% static '/game/images/trollface_right.png' %}" style="height:30px;position:absolute;" alt="img">
+            <img src="{% static '/game/images/lol2.png' %}" style="height:60px;margin-left:60%;position:absolute;" alt="img">
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <p class="scores">0 : 666</p> 
+        <img src="{% static '/game/images/rage.png' %}" style="height:50px; margin-left:15%;position:absolute;" alt="img">
+        <form action="{% url 'hard_game' %}">
+            <button class="try_again_btn" >Try again</button>
+        </form>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:60px; margin-left:70%;margin-top:5%;position:absolute;" alt="img">
+    {% elif count == 10 %}
+        <div >
+            <p class="alert" style="color:red; text-shadow: -2px -2px 4px black;font-size:80px;">
+                You lose...
+            </p>
+            <img src="{% static '/game/images/trollface_right.png' %}" style="height:30px;position:absolute;" alt="img">
+            <img src="{% static '/game/images/lol2.png' %}" style="height:60px;margin-left:60%;position:absolute;" alt="img">
+        </div>
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <p class="scores">-1 : 4000001</p>
+        <img src="{% static '/game/images/fuuu.png' %}" style="height:60px; margin-left:15%;position:absolute;" alt="img">
+        <img src="{% static '/game/images/lol.png' %}" style="height:60px; margin-left:55%;position:absolute;" alt="img">
+        <form action="{% url 'hard_game' %}">
+            <button class="try_again_btn" >Try again</button>
+        </form>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:70px; margin-left:70%;margin-top:5%;position:absolute;" alt="img">
+    {% elif count > 10 %}
+        <div >
+            <p class="alert" style="color:red; text-shadow: -2px -2px 4px black; font-size:100px;">
+                You lose...
+            </p>
+            <img src="{% static '/game/images/trollface_right.png' %}" style="height:40px;position:absolute;" alt="img">
+            <img src="{% static '/game/images/lol2.png' %}" style="height:70px;margin-left:60%;position:absolute;" alt="img">
+        </div>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:70px; margin-left:7%;margin-top:10%;position:absolute;" alt="img">
+        <img src="{% static '/game/images/trollface_right.png' %}" style="height:70px; margin-left:70%;margin-top:20%;position:absolute;" alt="img">
+        <img src="{% static '/game/images/fuuu.png' %}" style="height:130px; margin-left:2%;margin-top:20%;position:absolute;" alt="img">
+        <span >
+            {% if  player  == 0 %}
+                <img class="player_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="player_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="player_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        <img src="{% static '/game/images/trollface_left.png' %}" style="height:400px; margin-left:0%;position:absolute;" alt="img">
+        <span class="comp_step">
+            {% if  player  == 0 %}
+                <img class="comp_step_img" src="{% static 'game/images/paper_pic.png' %}" alt="img">
+            {% elif player  == 1 %} 
+                <img class="comp_step_img" src="{% static 'game/images/stone_pic.png' %}" alt="img">
+            {% elif player == 2 %}
+                <img class="comp_step_img" src="{% static 'game/images/scissors_pic.png' %}" alt="img">
+            {% endif %}
+        </span>
+        
+        <p class="scores" style="color:red; text-shadow: -2px -2px 4px black">You'll never win!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11</p> 
+        <img src="{% static '/game/images/rage2.png' %}" style="height:70px; margin-left:15%;position:absolute;" alt="img">
+        <img src="{% static '/game/images/lol.png' %}" style="height:70px; margin-left:55%;position:absolute;" alt="img">
+        <span>
+            <form action="{% url 'hard_game' %}">
+                <button class="try_again_btn" >Try again</button>
+            </form>    
+        </span>
+    {% endif %}
+        
+{% endblock content %}
