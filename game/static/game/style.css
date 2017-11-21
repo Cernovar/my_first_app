@@ -223,6 +223,24 @@ a{
     display: block; 
 }
 
+.try_again_btn {
+    background-color: rgb(151, 151, 149);
+    margin-left: 62%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
+}
+
+.try_again_btn:hover {
+    background-color: rgb(177, 165, 165);
+    margin-left: 62%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
+}
+
 /* About
 -----------------------------------------------------------------------------*/
 .good-luck {
