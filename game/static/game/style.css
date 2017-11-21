@@ -83,9 +83,22 @@ a{
 }
 
 .hi_btn {
-   padding: 2px;
-   margin-left: 5px;
+    background-color: rgb(151, 151, 149);
+    margin-left: 2%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
 } 
+
+.hi_btn:hover {
+    background-color: rgb(177, 165, 165);
+    margin-left: 2%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
+}
 
 /* Choice
 -----------------------------------------------------------------------------*/
@@ -230,8 +243,22 @@ a{
     margin-top: 3%;
 }
 
-.send-btn {
-    margin-left: 70%;
+.send_btn {
+    background-color: rgb(151, 151, 149);
+    margin-left: 62%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
+} 
+
+.send_btn:hover {
+    background-color: rgb(177, 165, 165);
+    margin-left: 62%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 120%
 }
 
 
